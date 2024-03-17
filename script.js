@@ -4,6 +4,7 @@ const images = [
     { src: "img/mariana.jpg", answer: "mariana emily" },
     { src: "img/navarro.jpg", answer: "joao lucas" },
     { src: "img/marcose.jpg", answer: "marcos eduardo" },
+    { src: "img/karen.JPG", answer: "karen" },
     { src: "img/luis.jpg", answer: "luis felipe" },
     { src: "img/leo.jpg", answer: "leonardo neves" },
     { src: "img/marcosa.jpg", answer: "marcos andrei" },
