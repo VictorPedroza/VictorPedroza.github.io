@@ -14,6 +14,7 @@ const images = [
 let points = 0;
 let currentImageIndex = 0;
 const totalImages = images.length;
+const wrongGuesses = []; // Lista para armazenar os índices das imagens respondidas incorretamente
 
 function checkGuess() {
     const guessInput = document.getElementById("guessInput");
@@ -21,9 +22,10 @@ function checkGuess() {
     const currentImage = images[currentImageIndex];
     const answer = currentImage.answer.toLowerCase(); // Converter resposta correta para minúsculas
 
-
     if (guess === currentImage.answer) {
         points++; // Adiciona um ponto se a resposta estiver correta
+    } else {
+        wrongGuesses.push(currentImageIndex); // Adiciona o índice da imagem respondida incorretamente
     }
 
     currentImageIndex++;
@@ -49,6 +51,12 @@ function showFinalMessage() {
         message = `Parabéns! Você ganhou a recompensa! Sua pontuação: ${points}/${totalImages}`;
     } else {
         message = `Infelizmente você não ganhou. Acertou apenas: ${points}/${totalImages}`;
+        if (wrongGuesses.length > 0) {
+            message += "<br>Os palpites errados foram:";
+            wrongGuesses.forEach(index => {
+                message += `<br>Pergunta ${index + 1}`;
+            });
+        }
     }
     showMessage(message);
     
@@ -60,7 +68,7 @@ function showFinalMessage() {
 
 function showMessage(message) {
     const messageContainer = document.getElementById("message");
-    messageContainer.textContent = message;
+    messageContainer.innerHTML = message;
 }
 
 function resetGuessInput() {
