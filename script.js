@@ -3,6 +3,7 @@ const images = [
     { src: "img/pedro.jpg", answer: "pedro luis" },
     { src: "img/mariana.jpg", answer: "mariana emily" },
     { src: "img/navarro.jpg", answer: "joao lucas" },
+    { src: "img/marcose.jpg", answer: "marcos eduardo" },
     { src: "img/luis.jpg", answer: "luis felipe" },
     { src: "img/leo.jpg", answer: "leonardo neves" },
     { src: "img/marcosa.jpg", answer: "marcos andrei" },
