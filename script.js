@@ -1,13 +1,13 @@
 const images = [
-    { src: "img/andre.jpg", answer: "andre" },
-    { src: "img/pedro.jpg", answer: "pedro" },
-    { src: "img/mariana.jpg", answer: "mariana" },
-    { src: "img/navarro.jpg", answer: "navarro" },
-    { src: "img/luis.jpg", answer: "luis" },
-    { src: "img/leo.jpg", answer: "leo" },
-    { src: "img/marcosa.jpg", answer: "marcos a" },
-    { src: "img/gui.jpg", answer: "gui" },
-    { src: "img/victo.jpg", answer: "victor" },
+    { src: "img/andre.jpg", answer: "andre miguel" },
+    { src: "img/pedro.jpg", answer: "pedro luis" },
+    { src: "img/mariana.jpg", answer: "mariana emily" },
+    { src: "img/navarro.jpg", answer: "joao lucas" },
+    { src: "img/luis.jpg", answer: "luis felipe" },
+    { src: "img/leo.jpg", answer: "leonardo neves" },
+    { src: "img/marcosa.jpg", answer: "marcos andrei" },
+    { src: "img/gui.jpg", answer: "guilherme barreto" },
+    { src: "img/victo.jpg", answer: "victor alexandre" },
     // Adicione mais objetos para cada nova imagem
 ];
 
