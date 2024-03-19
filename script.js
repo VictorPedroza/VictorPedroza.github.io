@@ -58,7 +58,7 @@ function loadCurrentImage() {
 function showFinalMessage() {
     let message;
     if (points === totalImages) {
-        message = `Parabéns! Você ganhou a recompensa! Sua pontuação foi de: ${points}/${totalImages}`;
+        message = `Parabéns! Você ganhou a recompensa! Sua pontuação: ${points}/${totalImages}`;
     } else {
         message = `Infelizmente você não ganhou. Acertou apenas: ${points}/${totalImages}`;
         if (wrongGuesses.length > 0) {
