@@ -148,7 +148,7 @@ header {
     }
 
     .text-content-main h3 {
-        font-size: 7vw !important;
+        font-size: 6vw !important;
         margin-top: 20px;
         font-weight: 50;
     }
@@ -156,7 +156,6 @@ header {
     .text-content-main p {
         text-align: justify !important;
         font-size: 6vw !important;
-        font-weight: 100;
     }
 
     .top-main {
