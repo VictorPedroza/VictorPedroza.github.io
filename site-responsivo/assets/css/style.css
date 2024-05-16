@@ -154,7 +154,7 @@ header {
     }
 
     .text-content-main p {
-        text-align: justify !important;
+        text-align: start !important;
         font-size: 6vw !important;
     }
 
