@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --psicologia: #FFFF3F;
+    --fantasia: #70e000;
+    --romance: #c1121f;
+    --acao: #00ADFF;
+    --branco: #fff;
+    --cinza: #C7DEA6;
+    --preto: #000;
+    --cor-primaria: #53FF45;
+    --cor-secundaria: #3FBA02;
+    --acent: #036016;
+    --h1: 2.98rem;
+    --h2: 2.488rem;
+    --h3: 2.07rem;
+    --h4: 1.78rem;
+    --h5: 1.44rem;
+    --p: 1.2rem;
+    --small: 0.83rem;
+    --inset: inset -2px 2px 5px rgba(0, 0, 0, 0.348);
+    --outset: 2px -1px 4px rgba(0, 0, 0, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    font-size: 24px;
+    background-color: var(--cor-primaria);
+}
+
+h1 {
+    font-size: var(--h1);
+}
+
+h2 {
+    font-size: var(--h2);
+}
+
+h3 {
+    font-size: var(--h3);
+}
+
+h4 {
+    font-size: var(--h4);
+}
+h5 {
+    font-size: var(--h5);
+}
+
+p {
+    font-size: var(--p);
+}
+
+.small {
+    font-size: var(--small);
+}
+
+#small {
+    font-weight: normal;
+}
+
+.menu {
+    margin: 0;
+    width: 20vw;
+    height: 100vh;
+    background-color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--outset);
+}
+
+.pesquisa {
+    width: 85%;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 5px 10px;
+    background-color: rgba(193, 190, 190, 0.184);
+    border-radius: 20px;
+    box-shadow: var(--inset);
+}
+
+.pesquisa input {
+    background: transparent;
+    font-size: calc(1.5rem - 5px);
+    width: 100%;
+    border: none !important;
+    outline: none !important;
+    color: rgb(0, 0, 0, 0.7);
+}
+
+.pesquisa button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+}
+
+button img {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.content-menu-aside {
+    padding: 1vw 1vw;
+    width: 15vw;
+}
+
+.card-menu {
+    max-width: 200px;
+    margin: 10px 0;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: var(--outset);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-menu h5 {
+    font-size: 1.5vw;
+}
+
+.card-menu:hover {
+    transform: scale(1.05);
+    transition: 0.7s;
+}
+
+.card-menu img {
+    width: 2.5vw;
+    height: auto;
+}
+
+.txt-card-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.txt-card-menu p {
+    font-size: 0.7rem;
+    color: var(--preto);
+}
+
+#acao {
+    color: var(--acao);
+}
+
+#romamce {
+    color: var(--romance);
+}
+
+#fantasia {
+    color: var(--fantasia);
+}
+
+#psicologia {
+    color: var(--psicologia);
+}
+
+/*Tela de Tablet*/
+@media screen and (max-width: 789px) and (min-width: 480px) {
+    h1 {
+        font-size: var(--h2);
+    }
+
+    h2 {
+        font-size: var(--h3);
+    }
+    .top-main-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+    .bottom-bottom-main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pesquisa {
+        width: 15vw;
+    }
+
+    .pesquisa input {
+        font-size: 0.7rem;
+    }
+
+    button img {
+        width: 2vw;
+        height: auto;
+    }
+    
+    .txt-card-menu {
+        display: none;
+    }
+
+    .card-menu img {
+        max-width: 40px;
+        width: 15vw;
+        height: auto;
+    }
+
+    .card-menu {
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
+
+/*Tela de Celular*/
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: var(--h3);
+    }
+
+    h2 {
+        font-size: var(--h5);
+        font-weight: bold;
+    }
+
+    .pesquisa {
+        padding: 1vw 1vw;
+        margin: 5vw 10px 10px 10px;
+        width: 15vw;
+    }
+
+    .pesquisa input {
+        font-size: 0.7rem;
+    }
+
+    button img {
+        width: 2.5vw;
+        height: auto;
+    }
+
+    .txt-card-menu {
+        display: none;
+    }
+
+    .card-menu img {
+        width: 5vw;
+        height: auto;
+        max-width: 50px;
+    }
+
+    .card-menu {
+        justify-content: center;
+        align-items: center;
+    }
+}
