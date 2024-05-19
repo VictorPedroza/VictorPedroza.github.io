@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --branco: #fff;
+    --preto: #000;
+    --cor-primaria: #53FF45;
+    --cor-secundaria: #3FBA02;
+    --acent: #036016;
+    --h1: 2.98rem;
+    --h2: 2.488rem;
+    --h3: 2.07rem;
+    --h4: 1.78rem;
+    --h5: 1.44rem;
+    --p: 1.2rem;
+    --small: 0.83rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    font-size: 24px;
+}
+
+h1 {
+    font-size: var(--h1);
+}
+
+h2 {
+    font-size: var(--h2);
+}
+
+h3 {
+    font-size: var(--h3);
+}
+
+p {
+    font-size: var(--p);
+}
+
+.small {
+    font-size: var(--small);
+}
+
+#small {
+    font-weight: normal;
+}
+
+
+.top-main {
+    background-position: center center;
+    background-image: url('./biblioteca.jpg');
+    padding: 3vh 5vw;
+    display: flex;
+    flex-direction: column;
+    min-height: 450px;
+}
+
+.top-main h1{
+    color: var(--branco);
+}
+
+.top-main h2 {
+    color: var(--branco);
+}
+
+.top-main-btn {
+    margin: 10px 0 10px 0;
+}
+
+.btn {
+    background-color: var(--cor-primaria);
+    border: none;
+    padding: 1.2vw 4vh;
+    border-radius: 25px;
+    font-weight: bold;
+    color: var(--branco);
+    font-size: var(--p);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+#variant {
+    background-color: transparent;
+    border: var(--cor-primaria) solid 3px;
+}
+
+
+/*Parte de Baixo do Main*/
+.bottom-main {
+    background-color: var(--cor-primaria);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--preto);
+}
+
+.top-bottom-main {
+    max-width: 90vh;
+    margin: 20px 30px;
+}
+
+.top-bottom-main-title {
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-bottom-main p {
+    margin: 20px 0 0 0;
+    max-width: 700px;
+}
+
+
+
+.bottom-bottom-main {
+    display: flex;
+    gap: 50px;
+    margin: 20px 10px;
+}
+
+.item-bottom-bottom-main {
+    margin: 5px;
+}
+
+.item-bottom-bottom-main p {
+    padding: 5px;
+}
+
+.title-item-bottom-bottom-main {
+    margin: 5px 0 10 0;
+}
+
+
+
+
+/*Tela de Tablet*/
+@media screen and (max-width: 789px) {
+    h1 {
+        font-size: var(--h2);
+    }
+
+    h2 {
+        font-size: var(--h3);
+    }
+    .top-main-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+    .bottom-bottom-main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*Tela de Celular*/
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: var(--h3);
+    }
+
+    h2 {
+        font-size: var(--h5);
+        font-weight: bold;
+    }
+
+
+}
