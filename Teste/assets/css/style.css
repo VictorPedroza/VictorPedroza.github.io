@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #53FF45;
+    --white: #fff;
+    --h1: 3rem;
+    --h2: 2.50rem;
+    --h3: 2rem;
+    --h4: 1.7rem;
+    --h5: 1.5rem;
+    --h6: 1.2rem;
+    --p: 1rem;
+    --small: 0.8rem;
+    --subtitulo: normal;
+    --titulo: bold;
+    --sombra-ext: 5px 2px 20px rgba(128, 128, 128, 0.5);
+    --sombra-int: 2px 2px 5px gray inset;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: var(--h1);
+}
+
+h2 {
+    font-size: var(--h2);
+}
+
+h3 {
+    font-size: var(--h3);
+}
+
+h4 {
+    font-size: var(--h4);
+}
+
+h5 {
+    font-size: var(--h5);
+}
+
+h6 {
+    font-size: var(--h6);
+}
+
+p {
+    font-size: var(--p);
+}
+
+#titulo {
+    font-weight: var(--titulo);
+}
+
+#small {
+    font-size: var(--small);
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--primary-color);
+    padding: 15px;
+    max-width: 250px !important;
+    width: 70vw;
+    height: 100vh;
+    box-shadow: var(--sombra-ext);
+}
+
+.conteiner-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.categorias {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: var(--sombra-ext);
+}
+
+.card img {
+    max-width: 30px;
+    max-height: 30px;
+    width: 5vw;
+    height: auto;
+}
+
+
+.form-control {
+    background: white;
+    box-shadow: var(--sombra-int);
+    padding: 4px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.form-control input {
+    border: none;
+    background-color: transparent;
+    width: 90%;
+    outline: none !important;
+    padding: 5px;
+    font-size: var(--p);
+}
+
+.form-control button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    
+}
+
+.form-control button img {
+    max-width: 20x;
+    max-height: 20px;
+}
+
+main {
+    padding: 10px 20px;
+    width: 100%;
+}
+
+@media screen and (max-width: 789px) {
+    .text-card {
+        display: none;
+    }
+
+    aside {
+        width: 10vw;
+    }
+
+    .form-control {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-control input {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 440px) {
+    .card img {
+        width: 3.5vw;
+        height: auto;
+    }
+    .card {
+        border-radius: 40px;
+    }
+}
