@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem de Votos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="conteiner">
+        <label>Digite o valor de votos em <span>Branco: </span></label>
+        <input id="VB" type="number">
+        <label>Digite o valor de votos <span>Nulos: </span></label>
+        <input id="VN" type="number">
+        <label>Digite o valor de votos <span>Válidos: </span></label>
+        <input id="VV" type="number">
+        <div class="button-conteiner">
+            <button onclick="Click()">Consultar</button>
+        </div>
+        
+    </div>
+    <div class="resposta">
+        <p>Porcentagem de votos válidos: <span id="porcentagemValidos"></span>%</p>
+        <p>Porcentagem de votos nulos: <span id="porcentagemNulos"></span>%</p>
+        <p>Porcentagem de votos em branco: <span id="porcentagemBrancos"></span>%</p>
+      </div>
+
+
+</body>
+<script>
+    function Click() {
+        const VBValue = parseFloat(document.getElementById("VB").value);
+        const VNValue = parseFloat(document.getElementById("VN").value);
+        const VVValue = parseFloat(document.getElementById("VV").value);
+
+        const totalVotes = VBValue + VNValue + VVValue;
+
+        const porcentagemValidos = (VVValue / totalVotes) * 100;
+        document.getElementById("porcentagemValidos").textContent = porcentagemValidos.toFixed(2);
+        
+        const porcentagemNulos = (VNValue / totalVotes) * 100;
+        document.getElementById("porcentagemNulos").textContent = porcentagemNulos.toFixed(2);
+
+        const porcentagemBrancos = (VBValue / totalVotes) * 100;
+        document.getElementById("porcentagemBrancos").textContent = porcentagemBrancos.toFixed(2);
+        // Repita para os outros tipos de votos
+    }
+
+
+</script>
+
+</html>
