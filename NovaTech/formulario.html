@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="froms.css" type="text/css" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <a href="index.html"><img src="img/btn_voltar.png" class="voltar" width="30px" height="30px"></a>
+
+    <center>
+        <div class="logo">
+            <img src="img/logo_empresa.png">
+            <hr>
+            <br>
+        </div>
+    </center>
+
+    <form action="">
+
+        <fieldset class="grupo">
+            <legend>Identificação do usuário</legend>
+            <div class="campo">
+                <label for="nome"><strong>Nome</strong></label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="nome"><strong>Sobre Nome</strong></label>
+                <input type="text" name="sobre_nome" id="sobre_nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="nome"><strong>E-mail</strong></label>
+                <input type="email" nome="email" id="email" required>
+            </div>
+
+            <!-- Campo de Gênero-->
+            <div class="campo">
+                <label><strong>Qual o seu Gênero?</strong></label>
+                <label>
+                    <input type="radio" name="genero" value="feminino" checked>Feminino
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="masculino">Masculino
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="outro">Outro
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="prefiro não dizer">Prefiro não dizer
+                </label>
+            </div>
+
+            <!-- dtnascimento-->
+            <div class="campo">
+                <label for="dtnasc"><strong>Data de Nascimento</strong></label>
+                <input type="date" name="dtnasc" id="dtnasc" min="1920-01-01" max="2040-01-01">
+            </div>
+
+            <!-- Campo senha-->
+            <div class="campo">
+                <label for="senha"><strong>Senha</strong></label>
+                <input type="password" name="senha" id="senha" required>
+            </div>
+
+        </fieldset>
+        <br>
+        <br>
+
+        <fieldset class="grupo">
+
+            <!-- Campo para escolha do tipo de contato 1 ou mais opções para marcar (checkbox) -->
+            <div id="check">
+                <label><strong>Selecione os assuntos que deseja enviar informações:</strong></label><br><br>
+                <input type="checkbox" id="assunto1" name="assunto" value="Duvidas">
+                <label for="assunto1"> Dúvidas</label>
+                <input type="checkbox" id="assunto2" name="assunto" value="Sugestoes">
+                <label for="assunto2"> Sugestões</label>
+                <input type="checkbox" id="assunto3" name="assunto" value="Reclamacao">
+                <label for="assunto3"> Reclamações</label>
+                <input type="checkbox" id="assunto4" name="assunto" value="Elogio">
+                <label for="assunto4"> Elogio</label>
+                <input type="checkbox" id="assunto5" name="assunto" value="Outros">
+                <label for="assunto5"> Outros</label>
+            </div>
+
+            <!-- Caixa de texto -->
+            <div class="campo">
+                <label for="mensagem"><strong>Descreva sobre as informações desejadas o mais detalhado possível:
+                    </strong></label>
+                <br>
+                <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+            </div>
+
+        </fieldset>
+        <br>
+        <br>
+
+        <center><button class="botao" type="submit" onclick="enviar_email(); return false">ENVIAR</button></center>
+
+    </form>
+
+
+
+</body>
+
+</html>
