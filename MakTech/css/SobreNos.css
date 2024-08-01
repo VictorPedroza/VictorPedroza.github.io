@@ -1,0 +1,17 @@
+.titulo {
+    padding: 1rem;
+}
+
+.titulo p {
+    font-size: 1.2rem;
+}
+
+.historia {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+ul {
+    padding: .5rem;
+    font-size: 1.3rem;
+}
