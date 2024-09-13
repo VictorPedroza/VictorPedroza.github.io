@@ -1,0 +1,66 @@
+:root {
+    --primary: #348809;
+    --secondary: #d63e24;
+    --tertiary: #e7ecef;
+}
+
+.title{
+    color: var(--primary) !important;
+    font-weight: bold;
+}
+
+body {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.btn-primary{
+    background-color: var(--secondary) !important;
+    border: none !important;
+}
+
+.title-modal {
+    color: var(--secondary) !important;
+}
+
+.meses {
+    color: var(--primary) !important;
+}
+
+.cards-wraper {
+    display: flex;
+}
+
+.card {
+    margin: 0 .5rem;
+    width: calc(100%/3);
+}
+
+.card-img-top {
+    width: 300px; /* Defina o tamanho fixo desejado */
+    height: 450px; /* Defina o tamanho fixo desejado */
+    object-fit: cover; /* Corta a imagem se for maior */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 600px) {
+    .card-img-top {
+        width: 100px; /* Defina o tamanho fixo desejado */
+        height: 140px; /* Defina o tamanho fixo desejado */
+        object-fit: cover; /* Corta a imagem se for maior */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .card-body {
+        padding: .3rem !important;
+        font-size: 0.85rem !important;
+    }
+
+    br {
+        margin-bottom: 10px !important;
+    }
+}
