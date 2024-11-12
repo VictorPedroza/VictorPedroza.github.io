@@ -11,12 +11,11 @@ const x = setInterval(function() {
 
   // Calcula anos, meses, dias, horas, minutos e segundos
   const years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365)); // Considerando 365 dias por ano
-  const months = Math.floor((distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)); // Considerando meses de 30.44 dias
+  const months = Math.floor((distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30.44)); // Considerando meses de 30.44 dias
   const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
 
   // Exibe o contador no HTML
   document.getElementById("years").innerHTML = years;
