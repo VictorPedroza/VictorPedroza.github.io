@@ -1,5 +1,5 @@
 // Define a data inicial
-const startDate = new Date("May 13, 2024 23:01:00").getTime();
+const startDate = new Date("May 13, 2024 00:01:23").getTime();
 
 // Atualiza o contador a cada segundo
 const x = setInterval(function() {
