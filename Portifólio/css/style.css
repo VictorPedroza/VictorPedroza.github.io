@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #004ba8;
+    --secondary-color: #1f8cf4;
+    --background-color: #f1f1f1;
+    --text-color: #2f4358;
+    --button-hover-color: var(--secondary-color);
+    --border-color: #1f8cf4;
+}
+
+/* Tema escuro */
+.dark-mode {
+    --background-color: #2f4358;
+    --text-color: #ffffff;
+    --primary-color: #1f8cf4;
+    --secondary-color: #1f8cf4;
+    --button-hover-color: #004ba8;
+    --border-color: #004ba8;
+}
+
+/* Transições suaves de fundo e cor */
+body {
+    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Montserrat", serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/* Estilos para o botão de alternância (switch) */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    box-shadow: inset 5px 1px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--border-color);
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+/* Estilo quando o toggle está ativado (Tema Escuro) */
+input:checked + .slider {
+    background-color: var(--button-hover-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Estilos gerais do cabeçalho */
+header {
+    padding: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: #f1f1f1;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+header h1 {
+    font-size: 2.72rem;
+    flex: 1;
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Estilo para as seções */
+section {
+    padding: 1rem 0.5rem;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+section h2 {
+    font-size: 2.44rem;
+    color: var(--secondary-color);
+}
+
+section p {
+    font-size: 1.2rem;
+}
+
+#sobre p {
+    width: 50%;
+}
+
+#projetos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+#projetos h2 {
+    grid-column: 1 / -1;
+}
+
+.projeto {
+    padding: .8rem;
+}
+
+.projeto h3 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    text-align: start !important;
+}
+
+.projeto p {
+    text-align: justify;
+}
+
+.projeto img {
+    border-radius: .5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para o contêiner do Swiper */
+.swiper-container {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Estilos para cada slide */
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.swiper-slide p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    #projetos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    section p {
+        font-size: 0.9rem;
+        width: 100% !important;
+    }
+
+    #sobre, #projetos, #contato {
+        padding: 1.2rem;
+    }
+
+    #projetos {
+        grid-template-columns: 1fr;
+    }
+}
